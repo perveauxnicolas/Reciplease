@@ -3,20 +3,21 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 56;
+	objectVersion = 55;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		8B2AC2122B84FBD800F7C3D8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2112B84FBD800F7C3D8 /* AppDelegate.swift */; };
 		8B2AC2142B84FBD800F7C3D8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2132B84FBD800F7C3D8 /* SceneDelegate.swift */; };
-		8B2AC2162B84FBD800F7C3D8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2152B84FBD800F7C3D8 /* ViewController.swift */; };
 		8B2AC2192B84FBD800F7C3D8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2AC2172B84FBD800F7C3D8 /* Main.storyboard */; };
 		8B2AC21C2B84FBD800F7C3D8 /* Reciplease.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC21A2B84FBD800F7C3D8 /* Reciplease.xcdatamodeld */; };
 		8B2AC21E2B84FBD900F7C3D8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8B2AC21D2B84FBD900F7C3D8 /* Assets.xcassets */; };
 		8B2AC2212B84FBD900F7C3D8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8B2AC21F2B84FBD900F7C3D8 /* LaunchScreen.storyboard */; };
 		8B2AC22C2B84FBD900F7C3D8 /* RecipleaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC22B2B84FBD900F7C3D8 /* RecipleaseTests.swift */; };
-		8B2AC2362B84FBD900F7C3D8 /* RecipleaseUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2352B84FBD900F7C3D8 /* RecipleaseUITests.swift */; };
-		8B2AC2382B84FBD900F7C3D8 /* RecipleaseUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2372B84FBD900F7C3D8 /* RecipleaseUITestsLaunchTests.swift */; };
+		8B2AC24A2B84FFBA00F7C3D8 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC2492B84FFBA00F7C3D8 /* SearchViewController.swift */; };
+		8B2AC24C2B84FFEF00F7C3D8 /* FavoriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC24B2B84FFEF00F7C3D8 /* FavoriteViewController.swift */; };
+		8B2AC24E2B85119600F7C3D8 /* RecipeListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC24D2B85119600F7C3D8 /* RecipeListViewController.swift */; };
+		8B2AC2502B8511F200F7C3D8 /* RecipeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8B2AC24F2B8511F200F7C3D8 /* RecipeDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -40,7 +41,6 @@
 		8B2AC20E2B84FBD800F7C3D8 /* Reciplease.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Reciplease.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2AC2112B84FBD800F7C3D8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8B2AC2132B84FBD800F7C3D8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		8B2AC2152B84FBD800F7C3D8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8B2AC2182B84FBD800F7C3D8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8B2AC21B2B84FBD800F7C3D8 /* Reciplease.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Reciplease.xcdatamodel; sourceTree = "<group>"; };
 		8B2AC21D2B84FBD900F7C3D8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -49,8 +49,10 @@
 		8B2AC2272B84FBD900F7C3D8 /* RecipleaseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8B2AC22B2B84FBD900F7C3D8 /* RecipleaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseTests.swift; sourceTree = "<group>"; };
 		8B2AC2312B84FBD900F7C3D8 /* RecipleaseUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecipleaseUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		8B2AC2352B84FBD900F7C3D8 /* RecipleaseUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITests.swift; sourceTree = "<group>"; };
-		8B2AC2372B84FBD900F7C3D8 /* RecipleaseUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipleaseUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		8B2AC2492B84FFBA00F7C3D8 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		8B2AC24B2B84FFEF00F7C3D8 /* FavoriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteViewController.swift; sourceTree = "<group>"; };
+		8B2AC24D2B85119600F7C3D8 /* RecipeListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeListViewController.swift; sourceTree = "<group>"; };
+		8B2AC24F2B8511F200F7C3D8 /* RecipeDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecipeDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,8 +84,8 @@
 			isa = PBXGroup;
 			children = (
 				8B2AC2102B84FBD800F7C3D8 /* Reciplease */,
+				8B2AC2482B84FC9100F7C3D8 /* Supporting Files */,
 				8B2AC22A2B84FBD900F7C3D8 /* RecipleaseTests */,
-				8B2AC2342B84FBD900F7C3D8 /* RecipleaseUITests */,
 				8B2AC20F2B84FBD800F7C3D8 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -101,14 +103,12 @@
 		8B2AC2102B84FBD800F7C3D8 /* Reciplease */ = {
 			isa = PBXGroup;
 			children = (
+				8B2AC2222B84FBD900F7C3D8 /* Info.plist */,
 				8B2AC2112B84FBD800F7C3D8 /* AppDelegate.swift */,
 				8B2AC2132B84FBD800F7C3D8 /* SceneDelegate.swift */,
-				8B2AC2152B84FBD800F7C3D8 /* ViewController.swift */,
-				8B2AC2172B84FBD800F7C3D8 /* Main.storyboard */,
-				8B2AC21D2B84FBD900F7C3D8 /* Assets.xcassets */,
-				8B2AC21F2B84FBD900F7C3D8 /* LaunchScreen.storyboard */,
-				8B2AC2222B84FBD900F7C3D8 /* Info.plist */,
-				8B2AC21A2B84FBD800F7C3D8 /* Reciplease.xcdatamodeld */,
+				8B2AC2442B84FC3A00F7C3D8 /* Model */,
+				8B2AC2462B84FC7800F7C3D8 /* Controller */,
+				8B2AC2472B84FC8300F7C3D8 /* View */,
 			);
 			path = Reciplease;
 			sourceTree = "<group>";
@@ -121,13 +121,48 @@
 			path = RecipleaseTests;
 			sourceTree = "<group>";
 		};
-		8B2AC2342B84FBD900F7C3D8 /* RecipleaseUITests */ = {
+		8B2AC2442B84FC3A00F7C3D8 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				8B2AC2352B84FBD900F7C3D8 /* RecipleaseUITests.swift */,
-				8B2AC2372B84FBD900F7C3D8 /* RecipleaseUITestsLaunchTests.swift */,
+				8B2AC2452B84FC4D00F7C3D8 /* CoreDataStack */,
 			);
-			path = RecipleaseUITests;
+			path = Model;
+			sourceTree = "<group>";
+		};
+		8B2AC2452B84FC4D00F7C3D8 /* CoreDataStack */ = {
+			isa = PBXGroup;
+			children = (
+				8B2AC21A2B84FBD800F7C3D8 /* Reciplease.xcdatamodeld */,
+			);
+			path = CoreDataStack;
+			sourceTree = "<group>";
+		};
+		8B2AC2462B84FC7800F7C3D8 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				8B2AC2492B84FFBA00F7C3D8 /* SearchViewController.swift */,
+				8B2AC24D2B85119600F7C3D8 /* RecipeListViewController.swift */,
+				8B2AC24F2B8511F200F7C3D8 /* RecipeDetailViewController.swift */,
+				8B2AC24B2B84FFEF00F7C3D8 /* FavoriteViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		8B2AC2472B84FC8300F7C3D8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				8B2AC2172B84FBD800F7C3D8 /* Main.storyboard */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		8B2AC2482B84FC9100F7C3D8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				8B2AC21D2B84FBD900F7C3D8 /* Assets.xcassets */,
+				8B2AC21F2B84FBD900F7C3D8 /* LaunchScreen.storyboard */,
+			);
+			path = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -210,7 +245,7 @@
 				};
 			};
 			buildConfigurationList = 8B2AC2092B84FBD800F7C3D8 /* Build configuration list for PBXProject "Reciplease" */;
-			compatibilityVersion = "Xcode 14.0";
+			compatibilityVersion = "Xcode 13.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -262,9 +297,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				8B2AC21C2B84FBD800F7C3D8 /* Reciplease.xcdatamodeld in Sources */,
-				8B2AC2162B84FBD800F7C3D8 /* ViewController.swift in Sources */,
 				8B2AC2122B84FBD800F7C3D8 /* AppDelegate.swift in Sources */,
+				8B2AC2502B8511F200F7C3D8 /* RecipeDetailViewController.swift in Sources */,
+				8B2AC24E2B85119600F7C3D8 /* RecipeListViewController.swift in Sources */,
 				8B2AC2142B84FBD800F7C3D8 /* SceneDelegate.swift in Sources */,
+				8B2AC24C2B84FFEF00F7C3D8 /* FavoriteViewController.swift in Sources */,
+				8B2AC24A2B84FFBA00F7C3D8 /* SearchViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -280,8 +318,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8B2AC2362B84FBD900F7C3D8 /* RecipleaseUITests.swift in Sources */,
-				8B2AC2382B84FBD900F7C3D8 /* RecipleaseUITestsLaunchTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
