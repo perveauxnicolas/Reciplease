@@ -1,13 +1,13 @@
 //
-//  ResearchViewController.swift
+//  FavoriteListViewController.swift
 //  Reciplease
 //
-//  Created by Perveaux Nicolas on 20/02/2024.
+//  Created by Perveaux Nicolas on 21/02/2024.
 //
 
 import UIKit
 
-class SearchViewController: UIViewController {
+class FavoriteListViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()

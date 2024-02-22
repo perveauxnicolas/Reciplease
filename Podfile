@@ -16,4 +16,6 @@ target 'Reciplease' do
     # Pods for testing
   end
 
+pod 'Alamofire'
+
 end
