@@ -7,24 +7,54 @@
 
 import UIKit
 
-class RecipeListViewController: UIViewController {
-
+final class RecipeListViewController: UIViewController {
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+    // MARK: - Properties
+    var recipesList = [Hit]()
+    private var cellSelected: Hit?
+    private let segueToRecipeDetail = "segueToRecipeDetail"
+    
+    private let ListRecipesCell = "ListRecipesCell"
+    private let ListRecipesTableViewCell = "ListRecipesTableViewCell"
+    
+    // MARK: - Outlets
+    @IBOutlet weak var recipesTableView: UITableView!
+    
+    // MARK: - View life cycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        recipesTableView.reloadData()
     }
-    
+}
 
-    /*
-    // MARK: - Navigation
+// MARK: - UITableViewDataSource
+extension RecipeListViewController: UITableViewDataSource, UITableViewDelegate {
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return  recipesList.count
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        guard let listRecipesCell = tableView.dequeueReusableCell(withIdentifier: ListRecipesCell, for: indexPath) as? RecipesTableViewCell
+        else {
+            return UITableViewCell()
+        }
+        let recipe = recipesList[indexPath.row]
+        listRecipesCell.recipe = recipe.recipe
+        return listRecipesCell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.cellSelected = recipesList[indexPath.row]
+        performSegue(withIdentifier: self.segueToRecipeDetail, sender: self)
+    }
+}
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
+extension RecipeListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == segueToRecipeDetail {
+            guard let detailRecipeVC = segue.destination as? RecipeDetailViewController else { return }
+            detailRecipeVC.cellule = self.cellSelected
+        }
     }
-    */
-
 }

@@ -8,22 +8,47 @@
 import UIKit
 
 class RecipeDetailViewController: UIViewController {
+    // MARK: - Outlets
+    @IBOutlet weak var grayViewDetails: UIView!
+    @IBOutlet weak var recipeDetailsImageView: UIImageView!
+    @IBOutlet weak var yieldDetailsLabel: UILabel!
+    @IBOutlet weak var timeDetailsLabel: UILabel!
+    @IBOutlet weak var titleRecipeDetailsLabel: UILabel!
+    @IBOutlet weak var ingredientsDetailsTextView: UITextView!
+    @IBOutlet weak var favoriteButton: UIButton!
+    @IBOutlet weak var instructionsButton: UIButton!
+    
+    // MARK: - Properties
+    var cellule: Hit?
 
+    // MARK: - Methods
+    
+    // MARK: - View life cycle
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
+        addShadowTexte(label: titleRecipeDetailsLabel)
+        configureRecipe()
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    // MARK: - Actions
+    @IBAction func favoriteButtonTapped(_ sender: UIButton) {
     }
-    */
+    @IBAction func instructionsButtonTapped(_ sender: UIButton) {
+    }
 
+    // MARK: - Privates
+    private func configureRecipe() {
+        guard let ingredientLines = cellule?.recipe.ingredientLines.joined(separator: "\n" + "- ") else { return }
+        guard let yield = cellule?.recipe.yield else { return }
+        guard let image = cellule?.recipe.image else { return }
+        let totalTimeInt = cellule?.recipe.totalTime ?? 0
+        
+        ingredientsDetailsTextView.text = "- " + ingredientLines
+        titleRecipeDetailsLabel.text = cellule?.recipe.label.localizedCapitalized
+        yieldDetailsLabel.text = String(yield)
+        recipeDetailsImageView.load(urlImageString: image)
+        timeDetailsLabel.text = String(totalTimeInt)
+    }
+    
+    
 }
