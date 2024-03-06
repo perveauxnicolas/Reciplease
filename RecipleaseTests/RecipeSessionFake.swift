@@ -1,14 +1,22 @@
 //
-//  RecipeSession.swift
-//  Reciplease
+//  RecipeSessionFake.swift
+//  RecipleaseTests
 //
-//  Created by Perveaux Nicolas on 27/02/2024.
+//  Created by Perveaux Nicolas on 06/03/2024.
 //
 
 import Foundation
 import Alamofire
+@testable import Reciplease
 
-class RecipeSession: RecipeProtocol {
+class RecipeSessionFake: RecipeProtocol {
+    
+    private let fakeResponse: FakeResponse
+    
+    init(fakeResponse: FakeResponse) {
+        self.fakeResponse = fakeResponse
+    }
+    
     func request(url: URL, completionHandler: @escaping ((RecipeResult?, Error?) -> Void)) {
         AF.request(url)
             .response { response in
@@ -24,5 +32,11 @@ class RecipeSession: RecipeProtocol {
                     completionHandler(nil, error)
                 }
             }
+    }
+    
+    private func createRecipeSearchUrl(ingredientsList: [String]) -> URL? {
+        let ingredientUrl = ingredientsList.joined(separator: ",")
+        guard let url = URL(string: urlStringApi + ingredientUrl) else { return nil }
+        return url
     }
 }

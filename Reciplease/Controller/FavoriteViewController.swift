@@ -4,32 +4,37 @@
 //
 //  Created by Perveaux Nicolas on 20/02/2024.
 //
-
+/*
 import UIKit
 
 class FavoriteViewController: UIViewController {
 
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+   
+    @IBOutlet weak var FavoriteDetailsImageView: UIImageView!
+    @IBOutlet weak var titleFavoriteDetailsLabel: UILabel!
+    @IBOutlet weak var ingredientsFavoriteDetailsTextView: UITextView!
+    @IBOutlet weak var instructionsButton: UIButton!
+    @IBOutlet weak var FavoritesButton: UIBarButtonItem!
     
-    // MARK: - Protocols
-
+    
     // MARK: - Properties
+
+    var cellule: RecipeEntity?
+    private var coreDataSetting: CoreDataSetting?
     
     // MARK: - Methods
+
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        coreDataFunction()
+    }
     
-    // MARK: - View life cycle
- 
-    // MARK: - Outlets
-
-    // MARK: - Actions
-
-    // MARK: - Privates
-
-    // MARK: - Navigations
-    
-    // MARK: - Extensions
-
+    private func coreDataFunction() {
+        let coreDataStack = CoreDataStack(modelName: "Reciplease")
+        coreDataSetting = CoreDataSetting(coreDataStack: coreDataStack)
+    }
+   
 }
+
+
+*/

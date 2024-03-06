@@ -12,10 +12,8 @@ final class RecipeListViewController: UIViewController {
     // MARK: - Properties
     var recipesList = [Hit]()
     private var cellSelected: Hit?
-    private let segueToRecipeDetail = "segueToRecipeDetail"
-    
     private let ListRecipesCell = "ListRecipesCell"
-    private let ListRecipesTableViewCell = "ListRecipesTableViewCell"
+    private let segueToRecipeDetail = "segueToRecipeDetail"
     
     // MARK: - Outlets
     @IBOutlet weak var recipesTableView: UITableView!

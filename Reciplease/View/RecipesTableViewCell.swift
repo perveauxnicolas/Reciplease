@@ -1,5 +1,5 @@
 //
-//  ListRecipesTableViewCell.swift
+//  RecipesTableViewCell.swift
 //  Reciplease
 //
 //  Created by Perveaux Nicolas on 27/02/2024.
@@ -9,7 +9,7 @@ import UIKit
 
 class RecipesTableViewCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet weak var grayView: UIView!
+    @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var titleRecipeLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!

@@ -8,7 +8,6 @@
 import UIKit
 
 // MARK: - Extension to custom views of TableViewCell
-
 extension UITableViewCell {
     // custom views
     func customViewCell(view: UIImageView) {

@@ -43,7 +43,6 @@ extension UIViewController {
     }
 }
 
-
 func addShadowTexte(label: UILabel) {
     label.layer.shadowColor = UIColor.black.cgColor
     label.layer.shadowOpacity = 0.9
@@ -51,3 +50,48 @@ func addShadowTexte(label: UILabel) {
     label.layer.shadowRadius = 2
 }
 
+// MARK: - Extension to open url
+extension UIViewController {
+    func webSiteRecipe(urlString: String) {
+        guard let url = URL(string: urlString) else { return }
+        guard UIApplication.shared.canOpenURL(url) else { return }
+        UIApplication.shared.open(url)
+    }
+}
+
+// MARK: - Extension to delete favorites and manage the button of favorites
+extension UIViewController {
+    // Delete favorite
+    func deleteRecipeFavorite(recipeTitle: String?, url: String?, CoreDataSetting: CoreDataSetting?, favoriteButton: UIBarButtonItem) {
+        CoreDataSetting?.deleteRecipe(recipeTitle: recipeTitle ?? "", url: url ?? "")
+        setupFavoriteButton(color: .white, barButtonItem: favoriteButton)
+        debugFavorites(titleDebug: "Favorite deleted", coreDataSetting: CoreDataSetting)
+    }
+    
+    // Setting the button favorite
+    func setupFavoriteButton(color: UIColor, barButtonItem: UIBarButtonItem) {
+        barButtonItem.tintColor = color
+        navigationItem.rightBarButtonItem = barButtonItem
+    }
+}
+
+// MARK: - Extension to debug
+extension UIViewController {
+    // function to debug
+    func debugFavorites(titleDebug: String, coreDataSetting: CoreDataSetting?) {
+        print(titleDebug)
+        print("-----------------------")
+        var index = 0
+        for recipe in coreDataSetting?.recipes ?? [RecipeEntity]() {
+            print("Recipes N° \(index + 1) :")
+            print("time : \(String(recipe.time))")
+            print("Servings : \(recipe.yield)")
+            print(recipe.image ?? "image error")
+            print(recipe.url ?? "url error")
+            print(recipe.title ?? "title error")
+            print(recipe.ingredients ?? "ingredients error")
+            print("\n")
+            index += 1
+        }
+    }
+}

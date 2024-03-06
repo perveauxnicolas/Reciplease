@@ -57,8 +57,11 @@ final class RecipeSearchViewController: UIViewController {
     }
     
     private func addIngredient() {
-        guard let ingredientName = ingredientTextField.text,
-              var ingredientListView = ingredientTextView.text else { return }
+        guard let ingredientName = ingredientTextField.text, !ingredientName.isEmpty,
+              var ingredientListView = ingredientTextView.text else {
+            presentAlert(typeError: .arrayIsEmpty)
+            toggleActivityIndicator(shown: false, activityIndicator: searchRecipeActivityIndicator, validateButton: searchButton)
+            return }
         ingredientsList.append(ingredientName)
         ingredientListView  += "- " + ingredientName + "\n"
         ingredientTextView.text = ingredientListView
@@ -70,7 +73,7 @@ final class RecipeSearchViewController: UIViewController {
         ingredientsList = [String]()
     }
 }
-    
+
 // MARK: - Extension
 extension RecipeSearchViewController: UITextFieldDelegate {
     func textFieldShouldReturn(_ ingredientTextField: UITextField) -> Bool {
