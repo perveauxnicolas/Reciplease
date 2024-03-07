@@ -17,6 +17,7 @@ final class FavoriteListViewController: UIViewController {
     
     // MARK: - Outlets
     @IBOutlet weak var favoritesRecipesTableView: UITableView!
+
     
     // MARK: - View life cycle
     override func viewWillAppear(_ animated: Bool) {
@@ -27,12 +28,16 @@ final class FavoriteListViewController: UIViewController {
         super.viewDidLoad()
         coreDataFunction()
     }
-    // MARK: - Privates
-    private  func coreDataFunction() {
-        guard let coreDataStack = coreDataSetting?.coreDataStack  else { return }
-        coreDataSetting = CoreDataSetting(coreDataStack: coreDataStack)
+    
+    @IBAction func ResetButton(_ sender: UIBarButtonItem) {
+        coreDataSetting?.deleteAllRecipes()
+        favoritesRecipesTableView.reloadData()
     }
     
+    // MARK: - Privates
+    private  func coreDataFunction() {
+        coreDataSetting = CoreDataSetting(coreDataStack: CoreDataStack(modelName: "Reciplease"))
+    }
 }
 
 // MARK: - UITableViewDataSource
@@ -77,8 +82,8 @@ extension FavoriteListViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == segueToRecipeDetailFavorite {
             guard let detailFavoritesRecipesVC = segue.destination
-                    as? FavoriteListViewController else { return }
-            detailFavoritesRecipesVC.cellSelected = self.cellSelected
+                    as? FavoriteViewController else { return }
+            detailFavoritesRecipesVC.cellule = self.cellSelected
         }
     }
 }
