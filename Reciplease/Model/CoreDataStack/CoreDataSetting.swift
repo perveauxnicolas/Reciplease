@@ -11,7 +11,7 @@ import CoreData
 final class CoreDataSetting {
     
     // MARK: - Properties
-    /* private*/ let coreDataStack: CoreDataStack
+    private let coreDataStack: CoreDataStack /* */
     private let managedObjectContext: NSManagedObjectContext
     
     var recipes: [RecipeEntity] {
@@ -62,12 +62,5 @@ final class CoreDataSetting {
         guard let counter = try? managedObjectContext.count(for: request) else { return false }
         return counter == 0 ? false : true
     }
-    
-    
-    
-    
-    
-    
-    
     
 }

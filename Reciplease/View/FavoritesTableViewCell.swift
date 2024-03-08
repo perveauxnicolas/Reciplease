@@ -9,7 +9,7 @@ import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet weak var greenViewfavorite: UIView!
+ //   @IBOutlet weak var greenViewfavorite: UIView!
     @IBOutlet weak var FavoriteImageView: UIImageView!
     @IBOutlet weak var titleFavoriteLabel: UILabel!
     @IBOutlet weak var ingredientsFavoriteLabel: UILabel!

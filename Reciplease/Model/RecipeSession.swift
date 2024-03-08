@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class RecipeSession: RecipeProtocol {
+class RecipeSession:  RecipeProtocol {
     func request(url: URL, completionHandler: @escaping ((RecipeResult?, Error?) -> Void)) {
         AF.request(url)
             .response { response in
@@ -18,9 +18,11 @@ class RecipeSession: RecipeProtocol {
                         let jsonData = try JSONDecoder().decode(RecipeResult.self, from: data!)
                         completionHandler(jsonData, nil)
                     } catch {
+                        print("error ceci n'est pas un ingredient")
                         completionHandler(nil, error)
                     }
                 case .failure(let error):
+                    print("error pas connexion internet")
                     completionHandler(nil, error)
                 }
             }

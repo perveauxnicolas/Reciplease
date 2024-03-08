@@ -8,10 +8,10 @@
 import Foundation
 import CoreData
 
-final class CoreDataStack { 
+open class CoreDataStack {
     // MARK: - Properties
     private var modelName = "Reciplease"
-
+    
     // MARK: - Initializer
     public init(modelName: String) {
         self.modelName = modelName

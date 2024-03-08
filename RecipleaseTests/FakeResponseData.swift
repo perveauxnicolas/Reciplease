@@ -17,10 +17,11 @@ class FakeResponseData {
     class NetworkError: Error {}
     static let networkError = NetworkError()
     
+    
     // MARK: - Data
     static var correctData: Data {
         let bundle = Bundle(for: FakeResponseData.self)
-        guard let url = bundle.url(forResource: "RecipesLoader", withExtension: "json") else {
+        guard let url = bundle.url(forResource: "RecipeLoader", withExtension: "json") else {
             fatalError("RecipeLoader.json is not found.")
         }
         guard let data = try? Data(contentsOf: url) else { return Data() }

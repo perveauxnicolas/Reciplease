@@ -50,6 +50,7 @@ final class RecipeSearchViewController: UIViewController {
                 self.recipesList = recipeResult.hits
                 self.performSegue(withIdentifier: self.segueToRecipesList, sender: self)
             } else {
+                print("error noRecipe")
                 self.presentAlert(typeError: .noRecipe)
                 self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
             }

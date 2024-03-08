@@ -9,7 +9,6 @@ import UIKit
 
 class RecipesTableViewCell: UITableViewCell {
     // MARK: - Outlets
-    @IBOutlet weak var greenView: UIView!
     @IBOutlet weak var recipeImageView: UIImageView!
     @IBOutlet weak var titleRecipeLabel: UILabel!
     @IBOutlet weak var ingredientsLabel: UILabel!

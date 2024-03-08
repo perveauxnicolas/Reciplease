@@ -49,8 +49,6 @@ class RecipeDetailViewController: UIViewController {
     
     // MARK: - Privates
     private func coreDataFunction() {
-      //  let coreDataStack = CoreDataStack(modelName: "Reciplease")
-        // coreDataSetting = CoreDataSetting(coreDataStack: coreDataStack)
         coreDataSetting = CoreDataSetting(coreDataStack: CoreDataStack(modelName: "Reciplease"))
 
     }

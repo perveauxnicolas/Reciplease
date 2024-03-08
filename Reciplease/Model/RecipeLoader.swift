@@ -27,7 +27,6 @@ final class RecipeLoader {
     private func createRecipeSearchUrl(ingredientsList: [String]) -> URL? {
         let ingredientUrl = ingredientsList.joined(separator: ",")
         guard let url = URL(string: recipeSession.urlStringApi + ingredientUrl) else { return nil }
-        //print(url)
         return url
     }
     
