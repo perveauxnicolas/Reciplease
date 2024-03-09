@@ -21,6 +21,7 @@ extension UIViewController {
     enum AlertError {
         case arrayIsEmpty
         case noRecipe
+        case incorrectIngredient
     }
     // Alert message to user
     func presentAlert(typeError: AlertError) {
@@ -34,6 +35,9 @@ extension UIViewController {
         case .noRecipe:
             title = "No recipe"
             message = "Sorry there is no recipe."
+        case .incorrectIngredient:
+            title = "Incorrect ingredient"
+            message = "Sorry there is not good ingredient."
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)
@@ -95,3 +99,26 @@ extension UIViewController {
         }
     }
 }
+
+// MARK: - Extension to timeformat
+extension Int {
+    // Formatting an integer (in minutes) in time
+    var formatToStringTime: String {
+        if self <= 0 {
+            return "N/A"
+        } else {
+            let minutes = self % 60
+            let hours = self / 60
+            
+            if hours == 0 {
+                return "\(minutes)min"
+            } else if minutes == 0 {
+                return "\(hours)h"
+            } else {
+                return "\(hours)h \(minutes)min"
+            }
+        }
+    }
+}
+
+

@@ -75,6 +75,9 @@ extension FavoriteListViewController: UITableViewDelegate {
         label.textColor = .white
         return label
     }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return coreDataSetting?.recipes.isEmpty ?? true ? 300 : 0
+    }
 }
 
 // MARK: - Navigation

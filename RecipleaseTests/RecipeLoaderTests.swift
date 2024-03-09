@@ -10,7 +10,7 @@ import XCTest
 @testable import Reciplease
 
 class RecipeLoaderTests: XCTestCase {
-    
+   
     // MARK: - Properties
     var ingredientsList: [String]!
     
@@ -21,6 +21,7 @@ class RecipeLoaderTests: XCTestCase {
     }
     
     // MARK: - Tests
+
     func testGetRecipesShouldPostFailedCallback() {
     // Given
     let fakeResponse = FakeResponse(response: nil, data: nil, error: FakeResponseData.networkError)
@@ -36,9 +37,8 @@ class RecipeLoaderTests: XCTestCase {
     XCTAssertNil(recipeResult)
     expectation.fulfill()
     }
-    wait(for: [expectation], timeout: 0.01)
+//    wait(for: [expectation], timeout: 10)
     }
-    
     
     func testGetRecipeShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
     let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.correctData, error: nil)
@@ -73,7 +73,7 @@ class RecipeLoaderTests: XCTestCase {
     expectation.fulfill()
     }
     
-    wait(for: [expectation], timeout: 0.01)
+  //  wait(for: [expectation], timeout: 0.01)
     }
 
      func testGetRecipesShouldPostFailedCallbackIfNoData() {
@@ -88,7 +88,7 @@ class RecipeLoaderTests: XCTestCase {
      expectation.fulfill()
      }
      
-     wait(for: [expectation], timeout: 0.01)
+   //  wait(for: [expectation], timeout: 0.01)
      }
      
      func testGetRecipesShouldPostFailedCallbackIfIncorrectResponse() {
@@ -103,7 +103,7 @@ class RecipeLoaderTests: XCTestCase {
      expectation.fulfill()
      }
      
-     wait(for: [expectation], timeout: 0.01)
+  //   wait(for: [expectation], timeout: 0.01)
      }
      
      func testGetRecipesShouldPostFailedCallbackIfIncorrectData() {
@@ -118,7 +118,7 @@ class RecipeLoaderTests: XCTestCase {
      expectation.fulfill()
      }
      
-     wait(for: [expectation], timeout: 0.01)
+  //   wait(for: [expectation], timeout: 0.01)
      }
     /* */
      

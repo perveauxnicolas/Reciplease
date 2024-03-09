@@ -29,7 +29,7 @@ class FavoritesTableViewCell: UITableViewCell {
             titleFavoriteLabel.text = recipeEntity?.title
             ingredientsFavoriteLabel.text = recipeEntity?.ingredients
             yieldFavoriteLabel.text = String(recipeEntity?.yield ?? 0)
-            timeFavoriteLabel.text = String((recipeEntity?.time ?? 0))
+            timeFavoriteLabel.text = Int(recipeEntity?.time ?? 0).formatToStringTime
             FavoriteImageView.load(urlImageString: recipeEntity?.image ?? "ImageDefault1024x768" + ".jpg")
         }
     }

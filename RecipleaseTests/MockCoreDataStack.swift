@@ -15,7 +15,6 @@ final class MockCoreDataStack: CoreDataStack {
     convenience init() {
         self.init(modelName: "Reciplease")
     }
-    
     override init(modelName: String) {
         super.init(modelName: modelName)
         let persistentStoreDescription = NSPersistentStoreDescription()
@@ -30,3 +29,5 @@ final class MockCoreDataStack: CoreDataStack {
         self.persistentContainer = container
     }
 }
+
+

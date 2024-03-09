@@ -4,13 +4,11 @@
 //
 //  Created by Perveaux Nicolas on 08/03/2024.
 //
-
 import XCTest
 @testable import Reciplease
 
 final class CoreDataSettingTests: XCTestCase {
     // MARK: - Properties
-
     var coreDataStack: MockCoreDataStack!
     var coreDataSetting: CoreDataSetting!
 
@@ -21,7 +19,6 @@ final class CoreDataSettingTests: XCTestCase {
         coreDataStack = MockCoreDataStack()
         coreDataSetting = CoreDataSetting(coreDataStack: coreDataStack)
     }
-
     override func tearDown() {
         super.tearDown()
         coreDataSetting = nil
@@ -29,7 +26,6 @@ final class CoreDataSettingTests: XCTestCase {
     }
 
     // MARK: - Tests
-
     func testAddRecipeMethods_WhenAnEntityIsCreated_ThenShouldBeCorrectlySaved() {
         coreDataSetting.createRecipe(title: "My Recipe", ingredients: "Ingredients", yield: 16, time: 0, image: "https://www.edamam.com/web-img/de7/de75049edc890303d8fd1293d35938b2.jpg", url: "http://www.seriouseats.com/recipes/2009/09/adult-brownie-chocolate-salt-coffee-andronicos-supermarket-san-francisco-recipe.html")
         XCTAssertTrue(!coreDataSetting.recipes.isEmpty)
@@ -45,8 +41,6 @@ final class CoreDataSettingTests: XCTestCase {
         XCTAssertTrue(coreDataSetting.recipes.count > 0)
         XCTAssertTrue(recipeIsFavorite)
     }
-
-  
     
     func testDeleteRecipeMethod_WhenAnEntityIsCreated_ThenShouldBeCorrectlyDeleted() {
         coreDataSetting.createRecipe(title: "My Recipe One", ingredients: "Ingredients", yield: 16, time: 0, image: "https://www.edamam.com/web-img/de7/de75049edc890303d8fd1293d35938b2.jpg", url: "http://www.seriouseats.com/recipes/2009/09/adult-brownie-chocolate-salt-coffee-andronicos-supermarket-san-francisco-recipe.html")
@@ -71,6 +65,12 @@ final class CoreDataSettingTests: XCTestCase {
         let recipeIsFavorite = coreDataSetting.checkIfRecipeIsFavorite(recipeTitle: "My Recipe", url: "http://www.seriouseats.com/recipes/2009/09/adult-brownie-chocolate-salt-coffee-andronicos-supermarket-san-francisco-recipe.html")
         XCTAssertFalse(recipeIsFavorite)
     }
+    
+  
+    
+    
+    
+    
     
     
 }

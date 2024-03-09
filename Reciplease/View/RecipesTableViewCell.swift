@@ -29,7 +29,7 @@ class RecipesTableViewCell: UITableViewCell {
             titleRecipeLabel.text = recipe?.label.localizedCapitalized
             ingredientsLabel.text = recipe?.ingredientLines.joined(separator: ", ")
             yieldLabel.text = String(recipe?.yield ?? 0)
-            timeLabel.text = String((recipe?.totalTime ?? 0))
+            timeLabel.text = (recipe?.totalTime ?? 0).formatToStringTime
             recipeImageView.load(urlImageString: recipe?.image ?? "ImageDefault1024x768" + ".jpg")
         }
     }

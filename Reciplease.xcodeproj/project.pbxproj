@@ -156,9 +156,9 @@
 				8BAA05952B989B25000C6E0D /* FakeResponseData.swift */,
 				8BAA05972B989B6B000C6E0D /* RecipeSessionFake.swift */,
 				8BAA05992B98A079000C6E0D /* RecipeLoaderTests.swift */,
-				8BAA059B2B98A3B2000C6E0D /* RecipeLoader.json */,
 				8BAA059D2B9B1A04000C6E0D /* MockCoreDataStack.swift */,
 				8BAA059F2B9B1B2A000C6E0D /* CoreDataSettingTests.swift */,
+				8BAA059B2B98A3B2000C6E0D /* RecipeLoader.json */,
 			);
 			path = RecipleaseTests;
 			sourceTree = "<group>";

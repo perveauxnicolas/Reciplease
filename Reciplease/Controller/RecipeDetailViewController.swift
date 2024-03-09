@@ -63,7 +63,7 @@ class RecipeDetailViewController: UIViewController {
         titleRecipeDetailsLabel.text = cellule?.recipe.label.localizedCapitalized
         yieldDetailsLabel.text = String(yield)
         recipeDetailsImageView.load(urlImageString: image)
-        timeDetailsLabel.text = String(totalTimeInt)
+        timeDetailsLabel.text = totalTimeInt.formatToStringTime
     }
     
     private func checkIfRecipeIsFavorite() {

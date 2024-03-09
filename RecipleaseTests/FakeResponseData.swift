@@ -7,8 +7,11 @@
 
 import Foundation
 
+
+import Alamofire
+
 class FakeResponseData {
-    
+
     // MARK: - Response
     static let responseOK = HTTPURLResponse(url: URL(string: "https://www.xxxxx.fr")!, statusCode: 200, httpVersion: nil, headerFields: nil)!
     static let responseKO = HTTPURLResponse(url: URL(string: "https://www.xxxxx.fr")!, statusCode: 500, httpVersion: nil, headerFields: nil)!

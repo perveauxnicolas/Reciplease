@@ -38,6 +38,7 @@ class FavoriteViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         coreDataFunction()
+        addShadowTexte(label: titleFavoriteDetailsLabel)
         configureRecipe()
         checkIfRecipeIsFavorite()
     }
@@ -54,7 +55,7 @@ class FavoriteViewController: UIViewController {
         titleFavoriteDetailsLabel.text = cellule?.title
         ingredientsFavoriteDetailsTextView.text = cellule?.ingredients
         yieldFavoriteLabel.text = String(yield)
-        timeFavoriteLabel.text = String(time)
+        timeFavoriteLabel.text = Int(time).formatToStringTime
         FavoriteDetailsImageView.load(urlImageString: cellule?.image)
     }
     

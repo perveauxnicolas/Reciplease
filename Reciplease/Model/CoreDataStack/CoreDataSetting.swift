@@ -11,7 +11,7 @@ import CoreData
 final class CoreDataSetting {
     
     // MARK: - Properties
-    private let coreDataStack: CoreDataStack /* */
+    private let coreDataStack: CoreDataStack 
     private let managedObjectContext: NSManagedObjectContext
     
     var recipes: [RecipeEntity] {
