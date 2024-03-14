@@ -5,7 +5,6 @@
 //  Created by Perveaux Nicolas on 08/03/2024.
 //
 
-
 import Reciplease
 import Foundation
 import CoreData

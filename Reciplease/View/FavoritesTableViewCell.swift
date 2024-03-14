@@ -9,14 +9,12 @@ import UIKit
 
 class FavoritesTableViewCell: UITableViewCell {
     // MARK: - Outlets
- //   @IBOutlet weak var greenViewfavorite: UIView!
     @IBOutlet weak var FavoriteImageView: UIImageView!
     @IBOutlet weak var titleFavoriteLabel: UILabel!
     @IBOutlet weak var ingredientsFavoriteLabel: UILabel!
     @IBOutlet weak var yieldFavoriteLabel: UILabel!
     @IBOutlet weak var timeFavoriteLabel: UILabel!
     
-    // MARK: - View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         customViewCell(view: FavoriteImageView)

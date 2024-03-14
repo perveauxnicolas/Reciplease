@@ -1,5 +1,5 @@
 //
-//  UIViewController.swift
+//  UIViewController+Helpers.swift
 //  Reciplease
 //
 //  Created by Perveaux Nicolas on 28/02/2024.
@@ -38,6 +38,7 @@ extension UIViewController {
         case .incorrectIngredient:
             title = "Incorrect ingredient"
             message = "Sorry there is not good ingredient."
+
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

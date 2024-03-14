@@ -18,11 +18,9 @@ class RecipeSession: RecipeProtocol {
                         let jsonData = try JSONDecoder().decode(RecipeResult.self, from: data!)
                         completionHandler(jsonData, nil)
                     } catch {
-                      //  print("error ceci n'est pas un ingredient")
                         completionHandler(nil, error)
                     }
                 case .failure(let error):
-                    print("error pas connexion internet")
                     completionHandler(nil, error)
                 }
             }

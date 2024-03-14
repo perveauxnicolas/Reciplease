@@ -6,7 +6,7 @@
 //
 
 import Foundation
-import Alamofire
+//import Alamofire
 
 final class RecipeLoader {
     // MARK: - Properties
@@ -23,7 +23,7 @@ final class RecipeLoader {
             completionHandler(true, recipeResult)
         }
     }
-
+    
     private func createRecipeSearchUrl(ingredientsList: [String]) -> URL? {
         let ingredientUrl = ingredientsList.joined(separator: ",")
         guard let url = URL(string: recipeSession.urlStringApi + ingredientUrl) else { return nil }

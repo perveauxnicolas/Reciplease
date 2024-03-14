@@ -15,7 +15,6 @@ class RecipesTableViewCell: UITableViewCell {
     @IBOutlet weak var yieldLabel: UILabel!
     @IBOutlet weak var timeLabel: UILabel!
     
-    // MARK: - View life cycle
     override func awakeFromNib() {
         super.awakeFromNib()
         customViewCell(view: recipeImageView)

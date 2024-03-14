@@ -12,3 +12,4 @@ struct FakeResponse {
     var data: Data?
     var error: Error?
 }
+
