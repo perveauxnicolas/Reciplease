@@ -23,22 +23,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "1A299677-1E00-4244-A6F0-28DCA5A932BD"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Reciplease/Controller/RecipeSearchViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "56"
-            endingLineNumber = "56"
-            landmarkName = "searchRecipe()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F593ADB9-3130-41EA-8F2D-13ED71D002C0"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -118,47 +102,143 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "B91DB6A9-4006-4DFD-820B-12C79E1A735B"
+            uuid = "C36E8BC6-7857-441F-B709-DC6757D93534"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "RecipleaseTests/RecipeSessionFake.swift"
+            filePath = "Reciplease/Model/RecipeLoader.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
+            startingLineNumber = "14"
+            endingLineNumber = "14"
+            landmarkName = "RecipeLoader"
+            landmarkType = "3">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3BBE6D77-2C88-4329-B62A-E1C1F2BD27AD"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/RecipeSession.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
             landmarkName = "request(url:completionHandler:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "B91DB6A9-4006-4DFD-820B-12C79E1A735B - d09c942ce97f74e8"
-                  shouldBeEnabled = "Yes"
+                  uuid = "3BBE6D77-2C88-4329-B62A-E1C1F2BD27AD - 297839e25796178e"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeSessionOkResponse.__allocating_init(fakeResponse: RecipleaseTests.FakeResponse) -&gt; RecipleaseTests.RecipeSessionOkResponse"
-                  moduleName = "RecipleaseTests"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Reciplease.RecipeSession.request(url: Foundation.URL, completionHandler: (Swift.Optional&lt;Reciplease.RecipeResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/RecipleaseTests/RecipeSessionFake.swift"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/Reciplease/Model/RecipeSession.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "0"
-                  endingLineNumber = "0"
-                  offsetFromSymbolStart = "52">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "284">
                </Location>
                <Location
-                  uuid = "B91DB6A9-4006-4DFD-820B-12C79E1A735B - 230e6a29d29eae3c"
-                  shouldBeEnabled = "Yes"
+                  uuid = "3BBE6D77-2C88-4329-B62A-E1C1F2BD27AD - 297839e25796178e"
+                  shouldBeEnabled = "No"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
-                  symbolName = "RecipleaseTests.RecipeSessionOkResponse.init(fakeResponse: RecipleaseTests.FakeResponse) -&gt; RecipleaseTests.RecipeSessionOkResponse"
-                  moduleName = "RecipleaseTests"
+                  symbolName = "closure #1 (Alamofire.DataResponse&lt;Swift.Optional&lt;Foundation.Data&gt;, Alamofire.AFError&gt;) -&gt; () in Reciplease.RecipeSession.request(url: Foundation.URL, completionHandler: (Swift.Optional&lt;Reciplease.RecipeResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/RecipleaseTests/RecipeSessionFake.swift"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/Reciplease/Model/RecipeSession.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "14"
-                  endingLineNumber = "14"
-                  offsetFromSymbolStart = "76">
+                  startingLineNumber = "43"
+                  endingLineNumber = "43"
+                  offsetFromSymbolStart = "800">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6CA633F1-6B7D-4A21-A7D7-ECA81DB4FA5F"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Controller/RecipeSearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "searchRecipe()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A44F885C-F1FB-4AD5-8F7B-CFD6E84698CF"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Controller/RecipeSearchViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "49"
+            endingLineNumber = "49"
+            landmarkName = "searchRecipe()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8F2A5FB0-4794-4A48-9498-F224EE0DB532"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Reciplease/Model/RecipeLoader.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "24"
+            endingLineNumber = "24"
+            landmarkName = "getRecipes(ingredientsList:completionHandler:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "8F2A5FB0-4794-4A48-9498-F224EE0DB532 - 751c535e170cf40"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Reciplease.RecipeLoader.getRecipes(ingredientsList: Swift.Array&lt;Swift.String&gt;, completionHandler: (Swift.Bool, Swift.Optional&lt;Reciplease.RecipeResult&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/Reciplease/Model/RecipeLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "304">
+               </Location>
+               <Location
+                  uuid = "8F2A5FB0-4794-4A48-9498-F224EE0DB532 - fa318025839d432f"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Reciplease.RecipeResult&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Reciplease.RecipeLoader.getRecipes(ingredientsList: Swift.Array&lt;Swift.String&gt;, completionHandler: (Swift.Bool, Swift.Optional&lt;Reciplease.RecipeResult&gt;) -&gt; ()) -&gt; ()"
+                  moduleName = "Reciplease"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/perveauxnicolas/Documents/XCODE/Reciplease/Reciplease/Model/RecipeLoader.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "24"
+                  endingLineNumber = "24"
+                  offsetFromSymbolStart = "84">
                </Location>
             </Locations>
          </BreakpointContent>

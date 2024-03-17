@@ -20,8 +20,7 @@ extension UIViewController {
     // Enumeration of the error
     enum AlertError {
         case arrayIsEmpty
-        case noRecipe
-        case incorrectIngredient
+        case APIError
     }
     // Alert message to user
     func presentAlert(typeError: AlertError) {
@@ -32,13 +31,10 @@ extension UIViewController {
         case .arrayIsEmpty:
             title = "No ingredient"
             message = "Please add an ingredient."
-        case .noRecipe:
-            title = "No recipe"
-            message = "Sorry there is no recipe."
-        case .incorrectIngredient:
-            title = "Incorrect ingredient"
-            message = "Sorry there is not good ingredient."
-
+       
+        case .APIError:
+            title = "API Error"
+            message = "Sorry there is not API return."
         }
         
         let alert = UIAlertController(title: title, message: message, preferredStyle: .alert)

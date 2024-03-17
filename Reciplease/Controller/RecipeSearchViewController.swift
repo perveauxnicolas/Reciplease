@@ -40,20 +40,23 @@ final class RecipeSearchViewController: UIViewController {
     private func searchRecipe() {
         guard !ingredientsList.isEmpty else {
             presentAlert(typeError: .arrayIsEmpty)
-            toggleActivityIndicator(shown: false, activityIndicator: searchRecipeActivityIndicator, validateButton: searchButton)
+            toggleActivityIndicator(shown: true, activityIndicator: searchRecipeActivityIndicator, validateButton: searchButton)
             return
         }
-        recipeLoader.getRecipes(ingredientsList: ingredientsList) { (success, recipeResult) in
+       recipeLoader.getRecipes(ingredientsList: ingredientsList) { (success, recipeResult) in
             self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
            if success {
-                guard let recipeResult = recipeResult else {
-                    self.presentAlert(typeError: .incorrectIngredient)
-                    self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
-                    return }
+               guard let recipeResult = recipeResult else { return }
+
+             //       print("Bad ingredient")
+             //       self.presentAlert(typeError: .incorrectIngredient)
+            //        self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
+             //       return }
+               
                 self.recipesList = recipeResult.hits
                 self.performSegue(withIdentifier: self.segueToRecipesList, sender: self)
            } else {
-               print("error Network")
+               self.presentAlert(typeError: .APIError)
            }
         }
     }

@@ -8,8 +8,10 @@
 import Foundation
 //import Alamofire
 
-final class RecipeLoader {
+final class RecipeLoader   {
     // MARK: - Properties
+    
+    
     private let recipeSession: RecipeProtocol
     
     init(recipeSession: RecipeProtocol = RecipeSession()) {
@@ -20,6 +22,10 @@ final class RecipeLoader {
     func getRecipes(ingredientsList: [String], completionHandler: @escaping (Bool, RecipeResult?) -> Void) {
         guard let url = createRecipeSearchUrl(ingredientsList: ingredientsList) else { return }
         recipeSession.request(url: url) { recipeResult,error  in
+            guard let recipeResult = recipeResult, error == nil else {
+                completionHandler (false, recipeResult)
+                return
+            }
             completionHandler(true, recipeResult)
         }
     }
@@ -29,5 +35,4 @@ final class RecipeLoader {
         guard let url = URL(string: recipeSession.urlStringApi + ingredientUrl) else { return nil }
         return url
     }
-    
 }

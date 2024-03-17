@@ -66,6 +66,4 @@ final class CoreDataSettingTests: XCTestCase {
         let recipeIsFavorite = coreDataSetting.checkIfRecipeIsFavorite(recipeTitle: "My Recipe", url: "http://www.seriouseats.com/recipes/2009/09/adult-brownie-chocolate-salt-coffee-andronicos-supermarket-san-francisco-recipe.html")
         XCTAssertFalse(recipeIsFavorite)
     }
-    
-   
 }
