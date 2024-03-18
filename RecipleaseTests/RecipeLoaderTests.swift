@@ -103,31 +103,8 @@ class RecipeLoaderTests: XCTestCase {
         wait(for: [expectation], timeout: 0.01)
     }
     
-    /*
-    
     func testGetRecipeShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
-        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.correctData, error: nil)
-        let recipeSessionFake = RecipeSessionResponse(fakeResponse: fakeResponse)
-        let recipeLoader = RecipeLoader(recipeSession: recipeSessionFake)
-        
-        let expectation = XCTestExpectation(description: "Wait for queue change.")
-        recipeLoader.getRecipes(ingredientsList: ingredientsList) { (success, recipeResult) in
-            
-             XCTAssertTrue(success)
-             XCTAssertNotNil(recipeResult)
-            XCTAssertEqual(recipeResult?.hits[0].recipe.label, "Blackberry + Apple Cocktail")
-             XCTAssertEqual(recipeResult?.hits[0].recipe.image, "https://edamam-product-images.s3.amazonaws.com/web-img/ccc/cccff7df44dd1afa256d874c04a0882c.jpg")
-             XCTAssertEqual(recipeResult?.hits[0].recipe.yield, Int(2.0))
-             XCTAssertEqual(recipeResult?.hits[0].recipe.url, "http://www.lottieanddoof.com/2012/09/lottie-doof-kelly-4/")
-             expectation.fulfill()
-             }
-             wait(for: [expectation], timeout: 0.01)
-        }
-     */
-    
-    
-    func testGetRecipeShouldPostSuccessCallbackIfNoErrorAndCorrectData() {
-        let fakeResponse = FakeResponse(response: FakeResponseData.responseOK, data: FakeResponseData.correctData, error: nil)
+
         let recipeSessionFake = RecipeSessionFake(data: FakeResponseData.correctData, response: FakeResponseData.responseOK, error: nil)
         let recipeLoader = RecipeLoader(recipeSession: recipeSessionFake)
         
@@ -147,7 +124,4 @@ class RecipeLoaderTests: XCTestCase {
         }
     
     
-    
-    }
-    
-
+}

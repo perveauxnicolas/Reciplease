@@ -4,18 +4,9 @@
 //
 //  Created by Perveaux Nicolas on 06/03/2024.
 //
-/*
- import Foundation
- @testable import Reciplease
- */
-
-
 
 import Foundation
-//import Alamofire
 @testable import Reciplease
-
-
 
 
 class RecipeSessionFake: RecipeProtocol {
@@ -53,7 +44,6 @@ class RecipeSessionOkResponse: RecipeProtocol {
     private let fakeResponse: FakeResponse
     init(fakeResponse: FakeResponse) {
         self.fakeResponse = fakeResponse
-        
     }
     func request(url: URL, completionHandler: @escaping ((RecipeResult?, Error?) -> Void)) {
         completionHandler(RecipeResult(hits: [Hit]()), nil)
