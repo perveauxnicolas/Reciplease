@@ -8,7 +8,7 @@
 import Foundation
 import Alamofire
 
-class RecipeSession: UIViewController,RecipeProtocol {
+class RecipeSession: RecipeProtocol {
     func request(url: URL, completionHandler: @escaping ((RecipeResult?, Error?) -> Void)) {
         AF.request(url)
             .response { response in
@@ -22,7 +22,7 @@ class RecipeSession: UIViewController,RecipeProtocol {
                         print("Error while decoding response")
                     }
                 case .failure(_):
-                    completionHandler(nil, Error.self as? Error) //AlertError.APIError as? Error
+                    completionHandler(nil, Error.self as? Error)
                 }
             }
     }
