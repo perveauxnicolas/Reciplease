@@ -28,5 +28,3 @@ final class MockCoreDataStack: CoreDataStack {
         self.persistentContainer = container
     }
 }
-
-

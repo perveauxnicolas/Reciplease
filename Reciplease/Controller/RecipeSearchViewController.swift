@@ -6,7 +6,6 @@
 //
 
 import UIKit
-//import Alamofire
 
 final class RecipeSearchViewController: UIViewController {
     
@@ -47,12 +46,6 @@ final class RecipeSearchViewController: UIViewController {
             self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
            if success {
                guard let recipeResult = recipeResult else { return }
-
-             //       print("Bad ingredient")
-             //       self.presentAlert(typeError: .incorrectIngredient)
-            //        self.toggleActivityIndicator(shown: false, activityIndicator: self.searchRecipeActivityIndicator, validateButton: self.searchButton)
-             //       return }
-               
                 self.recipesList = recipeResult.hits
                 self.performSegue(withIdentifier: self.segueToRecipesList, sender: self)
            } else {
